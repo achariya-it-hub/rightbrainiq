@@ -1,0 +1,39 @@
+# ─── Node / Next.js ───
+rightbrainiq-web/node_modules/
+rightbrainiq-web/.next/
+rightbrainiq-web/out/
+rightbrainiq-web/.turbo/
+
+# ─── Flutter ───
+rightbrainiq/.dart_tool/
+rightbrainiq/.packages
+rightbrainiq/.pub/
+rightbrainiq/build/
+rightbrainiq/.flutter-plugins
+rightbrainiq/.flutter-plugins-dependencies
+rightbrainiq/pubspec.lock
+rightbrainiq/android/.gradle/
+rightbrainiq/android/local.properties
+rightbrainiq/android/key.properties
+rightbrainiq/ios/Pods/
+rightbrainiq/ios/.symlinks/
+rightbrainiq/ios/Flutter/Flutter.framework
+rightbrainiq/ios/Flutter/Flutter.podspec
+rightbrainiq/ios/Runner.xcworkspace/
+
+# ─── Environment ───
+rightbrainiq-web/.env.local
+rightbrainiq-web/.env*.local
+.env
+.env.local
+
+# ─── OS ───
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# ─── IDE ───
+.idea/
+.vscode/
+*.iml
