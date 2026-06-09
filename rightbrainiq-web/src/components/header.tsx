@@ -47,11 +47,11 @@ export default function Header() {
 
         {/* Desktop Nav */}
         <nav className="hidden lg:flex items-center gap-1">
-          <Link href="/" className="px-4 py-2.5 text-base font-medium text-gray-700 hover:text-[#0C52AF] rounded-lg hover:bg-blue-50 transition">
+          <Link href="/" className="px-4 py-2.5 text-base font-medium text-gray-700 hover:text-[#0C52AF] rounded-lg hover:bg-[#0C52AF]/20 transition">
             Home
           </Link>
           <div className="relative group">
-            <Link href="/products" className="px-4 py-2.5 text-base font-medium text-gray-700 hover:text-[#0C52AF] rounded-lg hover:bg-blue-50 transition flex items-center gap-1">
+            <Link href="/products" className="px-4 py-2.5 text-base font-medium text-gray-700 hover:text-[#0C52AF] rounded-lg hover:bg-[#0C52AF]/20 transition flex items-center gap-1">
               Shop
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="6 9 12 15 18 9"/></svg>
             </Link>
@@ -60,7 +60,7 @@ export default function Header() {
               <div className="grid grid-cols-2 gap-3">
                 {categories.map(cat => (
                   <Link key={cat.slug} href={`/products?category=${cat.slug}`}
-                    className="flex items-start gap-3 p-3 rounded-xl hover:bg-blue-50 transition group/cat">
+                    className="flex items-start gap-3 p-3 rounded-xl hover:bg-[#0C52AF]/20 transition group/cat">
                     <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#0C52AF]/10 to-[#3496D3]/10 flex items-center justify-center flex-shrink-0">
                       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0C52AF" strokeWidth="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
                     </div>
@@ -76,16 +76,16 @@ export default function Header() {
               </Link>
             </div>
           </div>
-          <Link href="/lms" className="px-4 py-2.5 text-base font-medium text-gray-700 hover:text-[#0C52AF] rounded-lg hover:bg-blue-50 transition">
+          <Link href="/lms" className="px-4 py-2.5 text-base font-medium text-gray-700 hover:text-[#0C52AF] rounded-lg hover:bg-[#0C52AF]/20 transition">
             Learn
           </Link>
-          <Link href="/cart" className="px-4 py-2.5 text-base font-medium text-gray-700 hover:text-[#0C52AF] rounded-lg hover:bg-blue-50 transition">
+          <Link href="/cart" className="px-4 py-2.5 text-base font-medium text-gray-700 hover:text-[#0C52AF] rounded-lg hover:bg-[#0C52AF]/20 transition">
             Cart
           </Link>
-          <Link href="/about" className="px-4 py-2.5 text-base font-medium text-gray-700 hover:text-[#0C52AF] rounded-lg hover:bg-blue-50 transition">
+          <Link href="/about" className="px-4 py-2.5 text-base font-medium text-gray-700 hover:text-[#0C52AF] rounded-lg hover:bg-[#0C52AF]/20 transition">
             About
           </Link>
-          <Link href="/contact" className="px-4 py-2.5 text-base font-medium text-gray-700 hover:text-[#0C52AF] rounded-lg hover:bg-blue-50 transition">
+          <Link href="/contact" className="px-4 py-2.5 text-base font-medium text-gray-700 hover:text-[#0C52AF] rounded-lg hover:bg-[#0C52AF]/20 transition">
             Contact
           </Link>
         </nav>
@@ -95,7 +95,7 @@ export default function Header() {
           {/* Search */}
           <div ref={searchRef} className="relative">
             <button onClick={() => setSearchOpen(!searchOpen)}
-              className="p-2 text-gray-500 hover:text-[#0C52AF] rounded-lg hover:bg-blue-50 transition">
+              className="p-2 text-gray-500 hover:text-[#0C52AF] rounded-lg hover:bg-[#0C52AF]/20 transition">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
             </button>
             {searchOpen && (
@@ -112,7 +112,7 @@ export default function Header() {
                   <div className="mt-2 space-y-1 max-h-64 overflow-auto">
                     {searchResults.map(p => (
                       <Link key={p.id} href={`/products/${p.id}`} onClick={() => { setSearchOpen(false); setSearchQuery('') }}
-                        className="flex items-center gap-3 p-2 rounded-lg hover:bg-blue-50 transition">
+                        className="flex items-center gap-3 p-2 rounded-lg hover:bg-[#0C52AF]/20 transition">
                         <img src={p.image_url} alt={p.name} className="w-8 h-8 rounded object-cover" />
                         <div>
                           <p className="text-sm font-medium text-gray-800">{p.name}</p>
@@ -129,7 +129,7 @@ export default function Header() {
           {/* Cart */}
           <div ref={cartRef} className="relative">
             <button onClick={() => setCartOpen(!cartOpen)}
-              className="p-2 text-gray-500 hover:text-[#0C52AF] rounded-lg hover:bg-blue-50 transition relative">
+              className="p-2 text-gray-500 hover:text-[#0C52AF] rounded-lg hover:bg-[#0C52AF]/20 transition relative">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
                 <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
@@ -183,7 +183,7 @@ export default function Header() {
           </div>
 
           {/* Mobile Menu Toggle */}
-          <button onClick={() => setMenuOpen(!menuOpen)} className="lg:hidden p-2 text-gray-500 rounded-lg hover:bg-blue-50">
+          <button onClick={() => setMenuOpen(!menuOpen)} className="lg:hidden p-2 text-gray-500 rounded-lg hover:bg-[#0C52AF]/20">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               {menuOpen ? <><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></> : <><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></>}
             </svg>
@@ -195,16 +195,16 @@ export default function Header() {
       {menuOpen && (
         <div className="lg:hidden bg-white border-t border-gray-100 px-4 py-4 animate-slide-down">
           <div className="space-y-1">
-            <Link href="/" onClick={() => setMenuOpen(false)} className="block px-3 py-2.5 text-base font-medium text-gray-700 rounded-lg hover:bg-blue-50">Home</Link>
-            <Link href="/products" onClick={() => setMenuOpen(false)} className="block px-3 py-2.5 text-base font-medium text-gray-700 rounded-lg hover:bg-blue-50">Shop All</Link>
+            <Link href="/" onClick={() => setMenuOpen(false)} className="block px-3 py-2.5 text-base font-medium text-gray-700 rounded-lg hover:bg-[#0C52AF]/20">Home</Link>
+            <Link href="/products" onClick={() => setMenuOpen(false)} className="block px-3 py-2.5 text-base font-medium text-gray-700 rounded-lg hover:bg-[#0C52AF]/20">Shop All</Link>
             {categories.map(cat => (
               <Link key={cat.slug} href={`/products?category=${cat.slug}`} onClick={() => setMenuOpen(false)}
-                className="block px-3 py-2 pl-8 text-sm text-gray-600 rounded-lg hover:bg-blue-50">{cat.name}</Link>
+                className="block px-3 py-2 pl-8 text-sm text-gray-600 rounded-lg hover:bg-[#0C52AF]/20">{cat.name}</Link>
             ))}
-            <Link href="/lms" onClick={() => setMenuOpen(false)} className="block px-3 py-2.5 text-base font-medium text-gray-700 rounded-lg hover:bg-blue-50">Learn</Link>
+            <Link href="/lms" onClick={() => setMenuOpen(false)} className="block px-3 py-2.5 text-base font-medium text-gray-700 rounded-lg hover:bg-[#0C52AF]/20">Learn</Link>
             <hr className="my-2 border-gray-100" />
-            <Link href="/about" onClick={() => setMenuOpen(false)} className="block px-3 py-2.5 text-base font-medium text-gray-700 rounded-lg hover:bg-blue-50">About Us</Link>
-            <Link href="/contact" onClick={() => setMenuOpen(false)} className="block px-3 py-2.5 text-base font-medium text-gray-700 rounded-lg hover:bg-blue-50">Contact Us</Link>
+            <Link href="/about" onClick={() => setMenuOpen(false)} className="block px-3 py-2.5 text-base font-medium text-gray-700 rounded-lg hover:bg-[#0C52AF]/20">About Us</Link>
+            <Link href="/contact" onClick={() => setMenuOpen(false)} className="block px-3 py-2.5 text-base font-medium text-gray-700 rounded-lg hover:bg-[#0C52AF]/20">Contact Us</Link>
           </div>
         </div>
       )}
